@@ -1,0 +1,255 @@
+:root {
+    --main-colour:#f7e1d7;
+    --bg-colour: #003049;
+    --pad : 10px;
+    --margin : 5px;
+    --highlight-colour: #d62828;
+    --select-colour: #2A2F33;
+}
+
+::selection {
+    background-color : #e5c5d8;
+  }
+
+body {
+    background-color: var(--bg-colour);
+    font-size: 1px;
+    font: Garamond;
+    color: var(--main-colour)
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    font-size: 90px;
+    margin : 0px;
+    margin-bottom: -20px;
+}
+
+h4 {
+    margin: 0.25em 0 0.1em;
+}
+
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-style: normal;
+}
+
+img {
+    -webkit-user-drag: none;
+    display: block;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid var(--main-colour);
+}
+
+.banner {
+    text-align: center;
+    margin : var(--margin);
+    border: 1px solid var(--main-colour);
+}
+
+.textbox {
+    margin : var(--margin);
+    padding: var(--pad);
+    text-align: center;
+    border: 1px solid var(--main-colour);
+}
+
+.border {
+    border: 1px solid var(--main-colour);
+}
+
+.side {
+    margin : var(--margin);
+    width: 30vh;
+    text-wrap: true;
+    text-align: center;
+    padding: var(--pad);
+    border: 1px solid var(--main-colour);
+}
+
+.main {
+    margin: var(--margin);
+    padding: var(--pad);
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--main-colour);
+    justify-content: space-between; /* Adjust as needed */
+    gap: 10px; /* Adjust the gap between images as needed */
+}
+
+.pswp-gallery {
+    column-count: 3;
+    column-gap: 1vh;
+}
+
+.pcont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--pad);
+    padding-top: 1px;
+}
+
+@media (max-width: 1300px) {
+    .pswp-gallery {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 1200px) {
+    .pswp-gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .pswp-gallery {
+        column-count: 1
+    }
+}
+
+img {
+    height: auto;
+    object-fit: cover; 
+}
+
+.grid-item img {
+    height: auto;
+    max-width: 35vh;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.pswp--custom-icon-colors {
+    --pswp-icon-color: var(--main-colour);
+    --pswp-icon-color-secondary: black;
+}
+
+.linkstop {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--margin);
+    gap: 1vh;
+}
+
+a.menu{
+    width: 100%;
+    height: 4vh;
+}
+
+button {
+    color: var(--main-colour);
+    border-radius: 0;
+    width: 100%;
+    border: 1px solid var(--main-colour);
+    background-color: var(--bg-colour);
+
+}
+.pswp__img {
+    cursor: auto !important;
+}
+button:active:not(:disabled) {
+    -webkit-transform:scale(1);transform:scale(1)
+}
+hr {
+    background-color: var(--main-colour)
+}
+
+a:link {
+    color: var(--main-colour);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: var(--main-colour);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: var(--main-colour);
+  }
+  
+  /* selected link */
+  a:active {
+    color: var(--main-colour);
+  }
+
+
+/* Container for each image */
+a {
+    position: relative;
+    display: block;
+}
+
+/* Style for the overlay */
+.grid-item a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity as needed */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Style for the text within the overlay */
+a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--main-colour); /* Text color */
+    font-size: 10px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Hover effect to show overlay and text */
+a:hover::before {
+    opacity: 1;
+}
+
+a:hover span {
+    opacity: 1;
+}
+
+.pswp__counter {
+	font-size: 10px;
+
+}
+  
+@media (max-width: 600px) {
+    .content-container {
+        flex-direction: column;
+    }
+    .side {
+        width: auto;
+        margin-right: var(--margin);
+    }
+    #my-gallery {
+        justify-content: center;
+    }
+    .pswp-gallery img {
+        max-width: 100%;
+    }
+}
+
+

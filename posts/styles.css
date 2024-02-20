@@ -1,0 +1,52 @@
+:root {
+    --main-colour: rgb(255, 255, 255);
+    --bg-colour: #ff8800;
+    --text-color: rgb(147, 252, 133);
+    --pad: 10px;
+    --margin: 5px;
+    --highlight-colour: #738cad;
+    --red:#e48436;
+}
+
+body {
+    background: black;
+}
+
+@font-face {
+    font-family: 'CozetteVector';
+    src: url('../CozetteVector.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-size: 18px;
+    image-rendering: pixelated;
+    color: var(--main-colour);
+    font-family: 'CozetteVector';
+    background: black;
+}
+
+#posts-container {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    border: 1px solid var(--main-colour);
+    margin: auto;
+    margin-top: 10px;
+}
+
+.post {
+    display: flex;
+    border: 1px solid var(--main-colour);
+    flex-direction: column;
+    margin: 2px;
+    padding: var(--pad);
+}
+
+.post p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: var(--text-color);
+}
+

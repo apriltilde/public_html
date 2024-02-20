@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <title>april</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="wrapper">
+            <div class="largetitle">
+                <h1>April</h1>
+            </div>
+            
+            <div class="content">
+                <div class="wrappercontent">
+                    <div class="main">
+                        <div class="title">
+                            <h3>Welcome to my site</h3>
+                            <img src="images/symbol1.png">
+                        </div>
+                        <p>
+                            my little piece of the world wide web.
+                            mostly just an archive of myself for me
+                            but I dont mind if you look around
+                        </p>
+
+                        <p>
+                            have fun!
+                        </p>
+                    </div>
+                    <div class="main">
+                        <div class="title">
+                            <h3>Projects</h3>
+                            <img src="images/symbol2.png">
+                        </div>
+                        <div class="link">
+                            <a href="https://arpilmyroomim.neocities.org/mac/platinum-main/">.mac</a>
+                            <p>
+                                I dont really know what
+                                im doing here just having fun with a css framework I guess
+                            </p>
+                        </div>
+                        <div class="link">
+                            <a href="https://arpilmyroomim.neocities.org/chat/">.98chatroom</a>
+                            <p>
+                                Basic chatroom based off of ayanos comment widget. Feel free to leave a msg!
+                            </p>
+                        </div>
+                        <div class="link">
+                            <a href="https://arpilmyroomim.neocities.org/py/">.py</a>
+                            <p>
+                                Simple python ide (very basic)
+                            </p>
+                        </div>
+                        <div class="link">
+                            <a href="https://arpilmyroomim.neocities.org/blogtool/">.blogtool</a>
+                            <p>
+                                A tool using google sheets to make a blog which is useful for beginners, let me know if you use it on your site!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="title">
+                            <h3>Contact</h3>
+                            <img src="images/contact.png">
+                        </div>
+			<p style = "display: inline;"> My email is </p>
+			<a style = "color: var(--highlight-colour); display: inline;">/april@tilde.club</a>
+                        <p>
+			    My discord is
+			    <a href="https://discordapp.com/users/386594906946404354" style=" text-decoration: underline;">/stupid#3005</a>
+			    <br> <span class="ps">- yes I still have my silly numbers</span>
+                            <br> <span class = "ps">- i like the silly numbers</span>
+                            <br> <span class = "ps">- dont judge me</span>
+                        </p>
+
+                        <p>
+                            i am terminally online so feel free to message me!
+                        </p>
+                    </div>
+                    <div class="main">
+                        <div class="title">
+                            <h3>...</h3>
+                            <img src="images/symbol1.png">
+                        </div>
+                        <p>
+                            <span class = "red" >eggs: </span>soft boiled <br>
+                            <span class = "red" >steak: </span> rare <br>
+                            <span class = "red" >milk: </span>semi skimmed long life <br>
+                            <span class = "red" >alcohol: </span>amaretto <br>
+			    <span class = "red" >doctor: </span> tennant <br>
+                        <p>
+                    </div>
+                </div>
+
+
+                <div class=wrappercontent>
+                    <div class="side">
+                        <div class="pfp">
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="title">
+                            <h3>Sidebar</h3>
+                            <img src="images/symbol0.png">
+                        </div>
+                        <div class="links">
+                            <div class="link">
+                                <a href="https://tilde.club/~april/about/">.about</a>
+                            </div>
+                            <div class="link">
+                                <a href="https://tilde.club/~april/art/">.gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="title">
+                            <h3>Status</h3>
+                            <img src="images/data.png">
+                            <div id="posts-container">
+                            </div>
+                            <div style = "text-align: center;">
+                            <a href = "https://tilde.club/~april/posts" style = "opacity: 0.8;">see all posts</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="title">
+                            <h3>Button</h3>
+                            <img src="images/button.png">
+                        </div>
+                        <div class="buttonwrap" onclick="copyTextToClipboard()">
+                            <img src="images/button.jpg">
+                        </div>
+                        <div class="buttontext">
+                            <p>
+                                you may hotlink
+                                my button click
+                                the button
+                                to copy the code
+                            </p>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="title">
+                            <h3>Updates</h3>
+                            <img src="images/cube.png">
+                            </div>
+                            Last Updated: <br> <span id="updates"></span>
+                        </div>
+                        <div class="side">
+                            <div class="title">
+                                <h3>Visitors</h3>
+                                <img src="images/cd.png">
+                                </div>
+                                You are Visitor Number: <br> <span id="hitcount"></span>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <footer>April 2024 TM</footer>
+                    
+
+                </div>
+                <div id = "box">
+		<div class = "title">
+                    <h4>TODO</h4>
+		</div>
+                    <p>- improve chatroom</p>
+                    <p style = "text-decoration: line-through;">- fix last updated <span style = "text-decoration: line-through;" class = "ps">//currently linked to neocities</span></p>
+                    <p style = "text-decoration: line-through;">- make see all status page</p>
+                    <p style = "text-decoration: line-through;">- change pfp on mobile site</p>
+                </div>
+                <div id = "box2">
+                    <div class = "title" style = "text-align: center;">
+                    <h4>DNI list</h4>
+                    </div>
+                    <p>transphobes, gender critical, acephobes</p>
+                </div>
+</body>
+    <script src="status.js"></script>
+    <script src="script.js"></script>
+</html>
