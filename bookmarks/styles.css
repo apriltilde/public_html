@@ -1,0 +1,29 @@
+body {
+  font-family: monospace;
+}
+.entry {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+.link {
+  flex-grow: 1;
+}
+.datetime {
+  margin-left: 10px;
+}
+.auth {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .cont {
+    font-size: 15px;
+  }
+  .datetime {
+    display: none;
+}
+}
