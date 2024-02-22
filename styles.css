@@ -51,6 +51,10 @@ img {
     display: block;
 }
 
+canvas {
+  display: block;
+}
+
 li {
     color: var(--text-color);
     margin-bottom: 1vh;
