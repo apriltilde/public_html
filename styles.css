@@ -12,6 +12,10 @@
     background-color: #16205e;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 @font-face {
     font-family: 'CozetteVector';
     src: url('CozetteVector.ttf') format('truetype');

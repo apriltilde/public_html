@@ -44,6 +44,7 @@ img {
   justify-content: right;
   align-items: right;
   margin: 10px;
+  margin-bottom: 0;
 }
 
 
@@ -133,9 +134,7 @@ img {
   border: 1px solid var(--main);
 }
 
-.playlist-track-ctn > div{
-  margin-right:10px;
-}
+
 .playlist-info-track{
   width: 80%;
 }
@@ -164,6 +163,15 @@ img {
   font-size: 20px;
 }
 
+p {
+    font-size: 11px;
+    float: right;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding-right: 10px;
+}
 
 @media screen and (max-width: 800px) {
   .playlist-info-track, .playlist-duration {
@@ -174,12 +182,18 @@ img {
     font-size: 20px;
     justify-content: normal;
   }
+  .col {
+    width: 90dvw;
+}
   img {
     width: 100%;
   }
   .mainimg {
     display: none;
   }
+  p {
+    display: none;
+}
   h1 {
     margin-bottom: 15px;
   }
