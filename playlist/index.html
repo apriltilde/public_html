@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
+
+    <title>MP3 Player</title>
+    <link rel=stylesheet href="styles.css" media=all> 
+  </head>
+  <body>
+
+
+<audio id="myAudio" ontimeupdate="onTimeUpdate()">
+  <!-- <source src="audio.ogg" type="audio/ogg"> -->
+  <source id="source-audio" src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="player-ctn">
+<div class = "col">
+<div class = "main">
+    <div class = "maintitle">
+        <h1>The obscure playlist</h1>
+    </div>
+</div>
+<div>
+  <div class="infos-ctn">
+    <div class="title"></div>
+  </div>
+  <div class="infos-ctn" style="width: 100%; justify-content: right;">
+    <div class="timer">00:00</div>
+    <div class="duration">00:00</div>
+  </div>
+</div>
+  <div id="myProgress">
+    <div id="myBar"></div>
+  </div>
+  <div class="btn-ctn">
+     <div class="btn-action first-btn" onclick="previous()">
+        <div id="btn-faws-back">
+          <i class='fas fa-step-backward'></i>
+        </div>
+     </div>
+     <div class="btn-action" onclick="toggleAudio()">
+        <div id="btn-faws-play-pause">
+          <i class='fas fa-play' id="icon-play"></i>
+          <i class='fas fa-pause' id="icon-pause" style="display: none"></i>
+        </div>
+     </div>
+     <div class="btn-action" onclick="next()">
+        <div id="btn-faws-next">
+          <i class='fas fa-step-forward'></i>
+        </div>
+     </div>
+
+  </div>
+  <div class="playlist-ctn"></div>
+</div>
+</div>
+<div class = "col">
+    <div class = "mainimg">
+      <img height="500"src="https://tilde.club/~april/art/images/IMG_0138.jpg" alt="Image 1" />
+    </div>
+<script src=script.js></script>
+
+  </body>
+</html>
+
