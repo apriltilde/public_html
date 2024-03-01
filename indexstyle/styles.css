@@ -1,0 +1,236 @@
+:root {
+    --pad : 10px;
+    --mar : 5px;
+    --main-colour: #fb5;
+    --bg-colour: #ff8800;
+    --text-color: rgba(35, 77, 23, 0.733);
+    --pad: 10px;
+    --margin: 5px;
+    --highlight-colour: #236e8a;
+    --red:#e48436;
+}
+
+::selection {
+    background-color: #e68fc523;
+}
+
+a {
+    color: var(--text-color);
+}
+
+body html {
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: Courier, monospace;
+    font-size: 14px;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+.main h4 {
+    margin-left: var(--pad);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.side h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.main .link {
+    margin-top: 15px;
+}
+
+.ps {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 40px;
+    align-items: center;
+}
+
+.buttonwrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.buttontext {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.buttontext p {
+    margin-bottom: 1vh;
+    color: rgba(0, 0, 0, 0.829);
+    opacity: 0.7;
+    font-size: 10px;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maincontainer {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.btncont {
+    display: flex;
+    justify-content: center;
+}
+
+.wrappermain {
+    border-right: 1px solid black;
+    padding-right: 0.5vh;
+}
+
+.content {
+    padding: var(--pad);
+    padding-top: 0;
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--mar);
+    align-items: center;
+    max-width: 500px;
+    padding: 1px;
+}
+
+.wrapwrap {
+    display: flex;
+    margin-left: -200px
+}
+
+.side {
+    display: flex;
+    padding-top: 20px;
+    margin-top: var(--mar);
+    flex-direction: column;
+    padding: var(--pad);
+    max-width: 220px;
+}
+
+.wrapperimg {
+    display: flex;
+    align-items: flex-end;
+    margin-left: -500px;
+}
+
+.splash-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff; /* Set background color as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure it's on top of other elements */
+    opacity: 1; /* Initial opacity */
+    transition: opacity 1s ease; /* Smooth transition effect */
+}
+
+.splash-container img {
+    width: 500px;
+    height: auto;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+#updates {
+    color: var(--highlight-colour);
+    display: flex;
+    justify-content: center;
+}
+
+#hitcount {
+    color: var(--highlight-colour);
+    display: flex;
+    justify-content: center;
+}
+
+
+.splash-hidden {
+    opacity: 0;
+    pointer-events: none; /* Disable pointer events while hidden */
+}
+
+@media screen and (max-width: 600px) {
+    .maincontainer {
+        flex-direction: column;
+        gap: 0
+    }
+    p {
+        font-size: 12px;
+    }
+
+    .wrappermain {
+        border-right: 0;
+        padding-right: 0;
+    }
+
+    .side {
+        max-width: none;
+    }
+
+    .wrapperimg {
+        display: none;
+    }
+
+    .wrapwrap {
+        margin-left: 0;
+        flex-direction: column
+    }
+
+}
+
