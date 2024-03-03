@@ -14,6 +14,10 @@
     background-color: #e68fc523;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 a {
     color: var(--text-color);
 }
@@ -148,8 +152,6 @@ h1 {
 
 .side {
     display: flex;
-    padding-top: 20px;
-    margin-top: var(--mar);
     flex-direction: column;
     padding: var(--pad);
     max-width: 220px;

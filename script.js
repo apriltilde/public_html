@@ -3,6 +3,149 @@ function copyTextToClipboard() {
     navigator.clipboard.writeText(textToCopy)
 }
 
+function girlcopyTextToClipboard() {
+    const textToCopy = "<a href='https://arpilmyroomim.neocities.org/'><img src='https://arpilmyroomim.neocities.org/images/buttongirl.jpg'></a>"
+    navigator.clipboard.writeText(textToCopy)
+}
+
+window.addEventListener('load', () => {
+
+
+
+    for (let widget of document.getElementsByTagName('discord-widget')) {
+
+
+
+        let body1 = document.createElement('widget-body');
+
+
+
+        //appending body to the widget
+
+        widget.append(body1);
+
+
+
+        //create a server with just your self in it and go to server settings/ widget, copy JSON API and enable server widget.
+        //Invite channel doesn't matter
+        //Replace 👇 link with your JSON API link
+        // OR remove the numbers and replace it with your own server ID
+        fetch(`https://discord.com/api/guilds/1213910146917343232/widget.json`).then(data => {
+
+            data.json().then(data => {
+
+                //users
+
+                data.members.forEach((user) => {
+
+                    //API refreshes every 4mins - 5mins              
+
+                    let member1 = document.createElement('widget-member');
+
+                    let avatar1 = document.createElement('widget-member-avatar');
+
+                    let avatarIMG1 = document.createElement('img');
+
+                    let status1 = document.createElement(`widget-member-status-${user.status}`);
+                    let x = (`${user.status}`);
+			console.log(x);
+                    let name1 = document.createElement('widget-member-name');
+
+                    let statusText1 = document.createElement('status');
+
+                    avatarIMG1.src = user.avatar_url;
+
+                    status1.classList.add('widget-member-status');
+
+                    //update discriminator or remove if want
+
+                    //                                  👇here
+
+                    name1.innerHTML = `<a style = "height: 25px;" href = "https://discord.com/channels/@me">${user.username}#3005</p>`;
+
+
+
+                    // If online but not playing anything
+
+if (x === "online") {
+    statusText1.innerHTML = "<p style='color:#00ff00;'>Online</p>";
+} else if (x === "idle") {
+    statusText1.innerHTML = "<p style='color:#ffff00;'>Idle</p>";
+} else if (x === "offline") {
+    statusText1.innerHTML = "<p style='color:#ff0000;'>Offline :(</p>";
+}
+
+
+                    //Appends avatarIMG and status to avatar
+
+                    avatar1.append(avatarIMG1, status1);
+
+                    // Remove status feed from body1.append and add statusText
+
+                    //                          👇here if you want statusText on the same line as avatar and name
+
+                    member1.append(avatar1, name1);
+                    name1.append(statusText1);
+
+                    body1.append(member1,);
+
+
+
+
+
+                });
+
+
+
+                ////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+                //Get hours
+
+                const hours = Number(
+
+                    (new Date()).toLocaleString("en-GB", {
+
+                        //Change timezone to your timezone
+
+                        timeZone: "Europe/London",
+
+                        hour: "2-digit",
+
+                    })
+
+                );
+
+
+
+
+
+                // Change or update fields to what ever
+
+                if (hours >= 8 && 13 >= hours) {
+
+                    customstatus = "is probably working";
+
+                } else if (hours >= 13 && 18 >= hours) {
+
+                    customstatus = "is probably working";
+
+                } else if (hours <= 23 && 7 >= hours) {
+
+                    customstatus = "is sleeping";
+
+                }
+
+
+            });
+
+        });
+
+    }
+
+});
+
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {

@@ -197,6 +197,7 @@ footer {
     border : var(--bg-colour) 1px solid;
     opacity: 1;
     transition: opacity 0.4s ease;
+    margin-top: 10px;
 }
 
 .buttonwrap img:hover {
@@ -244,6 +245,61 @@ footer {
 .pfpwrap {
     display: flex;
     justify-content: center;
+}
+
+discord-widget {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: right;
+}
+
+discord-widget widget-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: auto;
+}
+
+discord-widget widget-body widget-member {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+}
+
+discord-widget widget-body widget-member widget-member-avatar img {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+status {
+       
+}
+
+
+a img {
+    transition: opacity 0.4s ease;
+}
+
+
+discord-widget widget-body widget-member widget-member-name {
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 600px) {

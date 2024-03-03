@@ -1,0 +1,33 @@
+:root {
+    --color: #99CBB2;
+    --background: white;
+    --size: 1;
+    --animation: terminal-blink;
+}
+
+.terminal {
+    --color: rgba(0, 0, 0, 0.99);
+    --background: var(--background);
+    --animation: terminal-bar;
+    --size: 1.1;
+    height: auto;
+}
+
+body.full-screen-terminal .terminal {
+    height: 400px;
+}
+
+body {
+    background: var(--background);
+}
+.terminal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 400px;
+    border-radius: 5px;
+    border: 1px solid var(--color);
+    overflow: hidden;
+}

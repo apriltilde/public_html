@@ -1,6 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 });
 
+
+function copyTextToClipboard() {
+    const textToCopy = "<a href='https://arpilmyroomim.neocities.org/'><img src='https://arpilmyroomim.neocities.org/images/button.jpg'></a>"
+    navigator.clipboard.writeText(textToCopy)
+}
+
+
+function girlcopyTextToClipboard2() {
+    const textToCopy = "<a href='https://arpilmyroomim.neocities.org/'><img src='https://arpilmyroomim.neocities.org/images/buttonigirl.jpg'></a>"
+    navigator.clipboard.writeText(textToCopy)
+}
+
 function hideSplashScreen() {
     const splashScreen = document.getElementById("splash-screen");
 
