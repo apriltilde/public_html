@@ -1,6 +1,6 @@
 :root {
     --color: #99CBB2;
-    --background: white;
+    --background: white ;
     --size: 1;
     --animation: terminal-blink;
 }
@@ -18,8 +18,9 @@ body.full-screen-terminal .terminal {
 }
 
 body {
-    background: var(--background);
+    background: white;
 }
+
 .terminal {
     position: absolute;
     top: 50%;
@@ -30,4 +31,28 @@ body {
     border-radius: 5px;
     border: 1px solid var(--color);
     overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    body.full-screen-terminal .terminal {
+        height: 100dvh;
+    }
+
+    .terminal {
+        width: 100dvw;
+        position: initial;
+        transform: none;
+	--color: rgba(255, 255, 255, 0.99);
+        --background: black;
+    }
+    
+    body {
+	background: black;
+
+}
+
+html, body {
+	margin: 0;
+}
+    
 }

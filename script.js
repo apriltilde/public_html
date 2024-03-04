@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
 
                     let status1 = document.createElement(`widget-member-status-${user.status}`);
                     let x = (`${user.status}`);
-			console.log(x);
+
                     let name1 = document.createElement('widget-member-name');
 
                     let statusText1 = document.createElement('status');
@@ -69,9 +69,7 @@ window.addEventListener('load', () => {
 
 if (x === "online") {
     statusText1.innerHTML = "<p style='color:#00ff00;'>Online</p>";
-} else if (x === "idle") {
-    statusText1.innerHTML = "<p style='color:#ffff00;'>Idle</p>";
-} else if (x === "offline") {
+} else {
     statusText1.innerHTML = "<p style='color:#ff0000;'>Offline :(</p>";
 }
 

@@ -27,6 +27,20 @@ $(document).ready(function() {
         });
       },
 
+      du: function() {
+        $.get({
+            url: "du.txt",
+            dataType: 'text',
+            success: function(data) {
+              this.echo(data);
+            }.bind(this),
+            error: function() {
+                this.error(`Failed"`);
+            }.bind(this)
+          });
+    },
+
+
       tree: function() {
         $.get({
             url: "tree.txt",
@@ -45,6 +59,7 @@ $(document).ready(function() {
           { name: 'ls', desc: 'displays files in directory' },
           { name: 'cat file', desc: 'reads file' },
           { name: 'cls', desc: 'clears screen' },
+	  { name: 'du', desc: 'displays disk usage summary' },
           { name: 'tree', desc: 'displays the websites directory tree' },
         ];
 
@@ -94,6 +109,23 @@ $(document).ready(function() {
             console.log(xhr.responseText);
         }
     };
-    xhr.open('GET', 'run_tree.php', true);
+    xhr.open('GET', 'term.php', true);
     xhr.send();
 });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Use AJAX to call the PHP script
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // Display the response from the PHP script (optional)
+                    console.log(xhr.responseText);
+                } else {
+                    console.error('Error: ' + xhr.status + ' - ' + xhr.statusText);
+                }
+            }
+        };
+        xhr.open('GET', 'du.php', true);
+        xhr.send();
+    });

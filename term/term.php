@@ -10,9 +10,9 @@ $outputFile = 'tree.txt';
 file_put_contents($outputFile, '');
 
 // Run the tree command and capture the output
-$treeOutput = shell_exec('tree ' . escapeshellarg($directory));
+$treeOutput = shell_exec('tree ' . escapeshellarg($directory) . ' | grep -v "output.txt"');
 
-// Save the tree output to the text file
+// Save the filtered tree output to the text file
 file_put_contents($outputFile, $treeOutput);
 
 // Output a message indicating success or failure

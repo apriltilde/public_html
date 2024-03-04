@@ -1,0 +1,138 @@
+../
+|-- 404.html
+|-- CozetteVector.ttf
+|-- about
+|   |-- index.html
+|   |-- script.js
+|   `-- styles.css
+|-- art
+|   |-- images
+|   |   |-- IMG_0000.jpg
+|   |   |-- IMG_0001.jpg
+|   |   |-- IMG_0002.png
+|   |   |-- IMG_0007.jpg
+|   |   |-- IMG_0008.jpg
+|   |   |-- IMG_0009.jpg
+|   |   |-- IMG_0010.jpg
+|   |   |-- IMG_0011.jpg
+|   |   |-- IMG_0026.JPG
+|   |   |-- IMG_0027.jpg
+|   |   |-- IMG_0029.JPG
+|   |   |-- IMG_0034.JPG
+|   |   |-- IMG_0035.JPG
+|   |   |-- IMG_0036.JPG
+|   |   |-- IMG_0037.JPG
+|   |   |-- IMG_0038.JPG
+|   |   |-- IMG_0039.JPG
+|   |   |-- IMG_0040.JPG
+|   |   |-- IMG_0041.JPG
+|   |   |-- IMG_0042.JPG
+|   |   |-- IMG_0057.JPG
+|   |   |-- IMG_0102.jpg
+|   |   |-- IMG_0125.JPG
+|   |   `-- IMG_0138.jpg
+|   |-- index.html
+|   |-- script.js
+|   `-- styles.css
+|-- bookmarks
+|   |-- index.html
+|   |-- script.js
+|   |-- styles.css
+|   `-- txt.txt
+|-- chat
+|   |-- chatlog.txt
+|   |-- index.html
+|   |-- load_messages.php
+|   |-- save_message.php
+|   |-- script.js
+|   `-- styles.css
+|-- count-ips.php
+|-- images
+|   |-- ajibtn.jpeg
+|   |-- button.jpg
+|   |-- button.png
+|   |-- buttongirl.jpg
+|   |-- cd.png
+|   |-- contact.png
+|   |-- cube.png
+|   |-- data.png
+|   |-- flower.png
+|   |-- flowers.jpg
+|   |-- heart.png
+|   |-- symbol0.png
+|   |-- symbol1.png
+|   `-- symbol2.png
+|-- index.html
+|-- indexstyle
+|   |-- images
+|   |   |-- how-sweet-1600.jpg
+|   |   |-- image\ (10).png
+|   |   |-- image\ (13).png
+|   |   |-- image\ (4).png
+|   |   |-- image\ (5).jpg
+|   |   |-- image\ (5).png
+|   |   |-- image\ (6).png
+|   |   |-- image\ (7).png
+|   |   |-- image\ (8).png
+|   |   `-- image\ (9).png
+|   |-- index.html
+|   |-- script.js
+|   |-- styles.css
+|   `-- tilde
+|       |-- images
+|       |   |-- button.jpg
+|       |   |-- how-sweet-1600.jpg
+|       |   |-- image\ (10).png
+|       |   |-- image\ (13).png
+|       |   |-- image\ (4).png
+|       |   |-- image\ (5).jpg
+|       |   |-- image\ (5).png
+|       |   |-- image\ (6).png
+|       |   |-- image\ (7).png
+|       |   |-- image\ (8).png
+|       |   `-- image\ (9).png
+|       |-- index.html
+|       |-- script.js
+|       |-- status.js
+|       `-- styles.css
+|-- pfp
+|   |-- pfp1.jpg
+|   |-- pfp2.png
+|   |-- pfp3.jpg
+|   |-- pfp4.png
+|   `-- pfp5.png
+|-- playlist
+|   |-- ModernMTStd-Condensed.otf
+|   |-- index.html
+|   |-- music
+|   |   |-- befree.opus
+|   |   |-- clove.opus
+|   |   |-- katrina.opus
+|   |   |-- kerosene.opus
+|   |   |-- musicforawhile.opus
+|   |   |-- still.jpg
+|   |   |-- unlovable.opus
+|   |   `-- youknowiknow.opus
+|   |-- script.js
+|   `-- styles.css
+|-- posts
+|   |-- index.html
+|   |-- script.js
+|   `-- styles.css
+|-- script.js
+|-- status.js
+|-- style404.css
+|-- styles.css
+|-- term
+|   |-- du.php
+|   |-- du.txt
+|   |-- index.html
+|   |-- jterm.css
+|   |-- term.css
+|   |-- term.js
+|   |-- term.php
+|   `-- tree.txt
+|-- update.php
+`-- writeToFile.php
+
+16 directories, 121 files
