@@ -162,16 +162,20 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=arpilmyroomim", true);
 xhttp.send();
 
-document.addEventListener("DOMContentLoaded", function () {
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Create a new XMLHttpRequest object
     var xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'writeToFile.php', true);
-    xhr.onload = function () {
-        if (xhr.status >= 200 && xhr.status < 300) {
-            var response = xhr.responseText;
-        } else {
-            // Handle errors
-            console.log("Error: " + xhr.statusText);
+    // Specify the type of request, the URL, and whether it should be asynchronous
+    xhr.open("GET", "strawberry.php", true);
+
+    // Set up a callback function to handle the response
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log(xhr.responseText);
+        } else if (xhr.readyState == 4 && xhr.status != 200) {
+            console.error('Failed to execute command. Status:', xhr.status);
         }
     };
 
@@ -181,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Create a new XMLHttpRequest object
-    var xhr = new XMLHttpRequest();
+   var xhr = new XMLHttpRequest();
 
     // Configure it to perform a GET request to the PHP script
     xhr.open('GET', 'count-ips.php', true);

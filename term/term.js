@@ -40,7 +40,22 @@ $(document).ready(function() {
           });
     },
 
+strawberry: function () {
+    var berryType = 'berry_1';  // Replace this with your actual logic to get berryType dynamically
 
+    // Execute the PHP script to add IP and username
+    $.get({
+        url: '../strawberry.php',
+        data: { berryType: berryType },  // Correct way to pass parameters
+        dataType: 'text',
+        success: function (response) {
+            this.echo(response);
+        }.bind(this),
+        error: function () {
+            this.error('Failed to execute strawberry command.');
+        }.bind(this)
+    });
+},
       tree: function() {
         $.get({
             url: "tree.txt",
@@ -129,3 +144,22 @@ $(document).ready(function() {
         xhr.open('GET', 'du.php', true);
         xhr.send();
     });
+document.addEventListener("DOMContentLoaded", function() {
+    // Create a new XMLHttpRequest object
+    var xhr = new XMLHttpRequest();
+
+    // Specify the type of request, the URL, and whether it should be asynchronous
+    xhr.open("GET", "../strawberry.php", true);
+
+    // Set up a callback function to handle the response
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log(xhr.responseText);
+        } else if (xhr.readyState == 4 && xhr.status != 200) {
+            console.error('Failed to execute command. Status:', xhr.status);
+        }
+    };
+
+    // Send the request
+    xhr.send();
+});

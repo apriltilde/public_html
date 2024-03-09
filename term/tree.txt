@@ -121,6 +121,7 @@
 |   `-- styles.css
 |-- script.js
 |-- status.js
+|-- strawberry.php
 |-- style404.css
 |-- styles.css
 |-- term
@@ -134,6 +135,6 @@
 |   |-- text.txt
 |   `-- tree.txt
 |-- update.php
-`-- writeToFile.php
+`-- users.db
 
 16 directories, 122 files

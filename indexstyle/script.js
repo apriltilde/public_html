@@ -51,7 +51,7 @@ xhttp.send();
 document.addEventListener("DOMContentLoaded", function () {
     var xhr = new XMLHttpRequest();
 
-    xhr.open('GET', '../writeToFile.php', true);
+    xhr.open('GET', '../strawberry.php', true);
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
             var response = xhr.responseText;
