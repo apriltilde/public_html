@@ -131,8 +131,9 @@
 |   |-- term.css
 |   |-- term.js
 |   |-- term.php
+|   |-- text.txt
 |   `-- tree.txt
 |-- update.php
 `-- writeToFile.php
 
-16 directories, 121 files
+16 directories, 122 files

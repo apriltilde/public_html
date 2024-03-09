@@ -1,10 +1,10 @@
 function copyTextToClipboard() {
-    const textToCopy = "<a href='https://arpilmyroomim.neocities.org/'><img src='https://arpilmyroomim.neocities.org/images/button.jpg'></a>"
+    const textToCopy = "<a href='https://tilde.club/~april/'><img src='https://tilde.club/~april/images/button.jpg'></a>"
     navigator.clipboard.writeText(textToCopy)
 }
 
 function girlcopyTextToClipboard() {
-    const textToCopy = "<a href='https://arpilmyroomim.neocities.org/'><img src='https://arpilmyroomim.neocities.org/images/buttongirl.jpg'></a>"
+    const textToCopy = "<a href='https://tilde.club/~april/'><img src='https://tilde.club/~april/images/buttongirl.jpg'></a>"
     navigator.clipboard.writeText(textToCopy)
 }
 

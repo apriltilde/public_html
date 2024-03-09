@@ -4,6 +4,10 @@
   --highlight: #534910;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 @font-face {
   font-family: 'mts'; /* Provide a unique name for your font */
   src: url('ModernMTStd-Condensed.otf') format('opentype'); /* Path to your OTF file */
@@ -31,7 +35,9 @@ h1 {
 }
 
 img {
-  width: 100%
+  width: 100%;
+ -webkit-user-drag: none;
+
 }
 
 .main {
