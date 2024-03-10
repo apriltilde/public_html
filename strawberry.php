@@ -1,5 +1,12 @@
 <?php
+if (empty($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') {
+    http_response_code(403); // Forbidden
+    echo "Forbidden: Direct access not allowed.";
+    exit;
+}
+
 $berryType = $_GET['berryType'] ?? '';
+$username = $_GET['username'] ?? '';
 $userIp = $_SERVER['REMOTE_ADDR'];
 
 class MyDB extends SQLite3 {
@@ -10,11 +17,7 @@ class MyDB extends SQLite3 {
 
 $db = new MyDB();
 
-if (!$db) {
-    echo $db->lastErrorMsg();
-} else {
-    echo "Opened database successfully\n";
-}
+
 
 // Retrieve the existing berryType for the given userIp
 $query = $db->prepare("SELECT berryType FROM berries WHERE ip = :userIp");
@@ -28,17 +31,16 @@ if ($existingBerryType !== null && strpos($existingBerryType, $berryType) === fa
     $berryType = $existingBerryType . ', ' . $berryType;
 }
 
-// Use a prepared statement to avoid SQL injection
-$sql = $db->prepare("INSERT OR REPLACE INTO berries (ip, berryType, date) VALUES (:userIp, :berryType, CURRENT_TIMESTAMP)");
+$sql = $db->prepare("INSERT OR REPLACE INTO berries (ip, username, berryType, date) VALUES (:userIp, :username, :berryType, CURRENT_TIMESTAMP)");
 $sql->bindValue(':userIp', $userIp, SQLITE3_TEXT);
+$sql->bindValue(':username', $username, SQLITE3_TEXT);
 $sql->bindValue(':berryType', $berryType, SQLITE3_TEXT);
-
 $ret = $sql->execute();
 
 if (!$ret) {
     echo $db->lastErrorMsg();
 } else {
-    echo "Record created or updated successfully\n";
+    echo 'Congrats ', $username, ': Strawberry found!';
 }
 
 $db->close();

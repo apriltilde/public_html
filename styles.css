@@ -64,6 +64,24 @@ li {
     margin-bottom: 1vh;
 }
 
+#leaderboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#leaderboard p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-bottom: 6px;
+    justify-content: space-between;
+}
+
+
 ::marker {
     color: var(--highlight-colour)
 }

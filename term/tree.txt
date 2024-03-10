@@ -95,6 +95,7 @@
 |       |-- script.js
 |       |-- status.js
 |       `-- styles.css
+|-- leaderboard.php
 |-- pfp
 |   |-- pfp1.jpg
 |   |-- pfp2.png
@@ -134,7 +135,8 @@
 |   |-- term.php
 |   |-- text.txt
 |   `-- tree.txt
+|-- test.php
 |-- update.php
 `-- users.db
 
-16 directories, 122 files
+16 directories, 124 files

@@ -40,14 +40,14 @@ $(document).ready(function() {
           });
     },
 
-strawberry: function () {
+strawberry: function (user) {
     var berryType = 'berry_1';  // Replace this with your actual logic to get berryType dynamically
 
     // Execute the PHP script to add IP and username
     $.get({
         url: '../strawberry.php',
-        data: { berryType: berryType },  // Correct way to pass parameters
-        dataType: 'text',
+        data: { berryType: berryType, username: user },  
+	dataType: 'text',
         success: function (response) {
             this.echo(response);
         }.bind(this),

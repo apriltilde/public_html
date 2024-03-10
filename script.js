@@ -183,6 +183,28 @@ document.addEventListener("DOMContentLoaded", function() {
     xhr.send();
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Create a new XMLHttpRequest object
+    var xhr = new XMLHttpRequest();
+
+    // Specify the type of request, the URL, and whether it should be asynchronous
+    xhr.open("GET", "leaderboard.php", true);
+
+    // Set up a callback function to handle the response
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Update the leaderboard div with the fetched data
+            document.getElementById("leaderboard").innerHTML = xhr.responseText;
+        } else if (xhr.readyState == 4 && xhr.status != 200) {
+            console.error('Failed to fetch leaderboard data. Status:', xhr.status);
+        }
+    };
+
+    // Send the request
+    xhr.send();
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     // Create a new XMLHttpRequest object
    var xhr = new XMLHttpRequest();
