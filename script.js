@@ -221,6 +221,32 @@ document.addEventListener("DOMContentLoaded", function () {
     xhr.send();
 });
 
+        function runPHPScript() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        // Display the result in the 'music' div
+                        document.querySelector('.music').innerHTML = xhr.responseText;
+                    } else {
+                        // Handle errors
+                        document.querySelector('.music').innerHTML = '<p>Error loading latest music video.</p>';
+                    }
+                }
+            };
+
+            // Replace 'ytget.php' with the correct path to your PHP script
+            xhr.open('GET', 'ytget.php', true);
+            xhr.send();
+        }
+
+        // Run the PHP script every minute (60000 milliseconds)
+        setInterval(runPHPScript, 20000);
+
+        // Run the script initially when the DOM is loaded
+        document.addEventListener("DOMContentLoaded", runPHPScript);
+
 document.addEventListener("DOMContentLoaded", function () {
     // Create a new XMLHttpRequest object
     var xhr = new XMLHttpRequest();
@@ -275,96 +301,7 @@ const images = [
     document.querySelector('.pfp').appendChild(imgElement);
 }
 
-const canvas = document.getElementById('myCanvas');
-fitToContainer(canvas);
 
-function fitToContainer(canvas){
-  // Make it visually fill the positioned parent
-  canvas.style.width ='100%';
-  // ...then set the internal size to match
-  canvas.width  = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
-}
-const ctx = canvas.getContext('2d');
-function saveCanvasImage() {
-const dataURL = canvas.toDataURL('image/jpeg');
-const link = document.createElement('a');
-link.href = dataURL;
-link.download = 'canvas.jpg';
-link.click();
-}
-
-let agents = [];
-
-function init() {
-    // Initialize the canvas with random colors
-
-    // Initialize 100 agents at random positions
-    for (let i = 0; i < 100; i++) {
-        agents.push({
-            x: Math.floor(Math.random() * canvas.width),
-            y: Math.floor(Math.random() * canvas.height),
-            direction: Math.floor(Math.random() * 4), // 0: up, 1: right, 2: down, 3: left
-        });
-    }
-}
-
-function draw() {
-    // Move agents and update pixel data
-    for (let i = 0; i < agents.length; i++) {
-        let agent = agents[i];
-
-        let currentColor = getColorAt(agent.x, agent.y);
-
-        // Turn pixel black and turn left if it's white
-        // Turn pixel white and turn right if it's black
-        if (currentColor === 255) {
-            setPixel(agent.x, agent.y, 0, 0, 0, 255);
-            agent.direction = (agent.direction - 1 + 4) % 4; // Turn left
-        } if (currentColor === 0) {
-            setPixel(agent.x, agent.y, 255, 255, 255, 255);
-            agent.direction = (agent.direction + 1) % 4; // Turn right
-        }  
-
-        // Move agent forward based on its direction
-        if (agent.direction === 0) agent.y = (agent.y - 1 + canvas.height) % canvas.height; // Up
-        else if (agent.direction === 1) agent.x = (agent.x + 1) % canvas.width; // Right
-        else if (agent.direction === 2) agent.y = (agent.y + 1) % canvas.height; // Down
-        else if (agent.direction === 3) agent.x = (agent.x - 1 + canvas.width) % canvas.width; // Left
-    }
-
-    ctx.putImageData(imageData, 0, 0);
-
-}
-
-function setPixel(x, y, r, g, b, a) {
-    let index = (x + y * canvas.width) * 4;
-    imageData.data[index] = r;
-    imageData.data[index + 1] = g;
-    imageData.data[index + 2] = b;
-    imageData.data[index + 3] = a;
-}
-
-function getColorAt(x, y) {
-    // Get the color of a pixel in the image
-    let index = (x + y * canvas.width) * 4;
-    return imageData.data[index];
-}
-
-const imageData = ctx.createImageData(canvas.width, canvas.height);
-
-let stepCount = 0;
-
-function animate() {
-draw();
-requestAnimationFrame(animate);
-stepCount++;
-}
-
-
-
-init();
-animate();
 
 // Call the function to display a random image when the page loads
 window.onload = getRandomImage;

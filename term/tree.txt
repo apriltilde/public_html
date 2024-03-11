@@ -1,4 +1,5 @@
 ../
+|-- ,
 |-- 404.html
 |-- CozetteVector.ttf
 |-- about
@@ -47,13 +48,7 @@
 |   |-- script.js
 |   `-- styles.css
 |-- count-ips.php
-|-- dbtest
-|   |-- data.html
-|   |-- databasename.db
-|   |-- db.js
-|   |-- getdata.php
-|   |-- index.html
-|   `-- test.php
+|-- data.db
 |-- images
 |   |-- Golden_Strawberry.webp
 |   |-- Strawberry.webp
@@ -147,9 +142,11 @@
 |   `-- tree.txt
 |-- update.php
 |-- users.db
-`-- what
-    |-- index.html
-    |-- script.js
-    `-- styles.css
+|-- what
+|   |-- index.html
+|   |-- script.js
+|   `-- styles.css
+|-- yt_database.db
+`-- ytget.php
 
-18 directories, 135 files
+17 directories, 133 files
