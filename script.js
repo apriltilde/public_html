@@ -161,29 +161,20 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=arpilmyroomim", true);
 xhttp.send();
+        function submitStrawberry() {
 
+            // Execute the PHP script to add IP, username, and berryType
+            $.get({
+                url: 'strawberry.php',
+                dataType: 'text',
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Create a new XMLHttpRequest object
-    var xhr = new XMLHttpRequest();
-
-    // Specify the type of request, the URL, and whether it should be asynchronous
-    xhr.open("GET", "strawberry.php", true);
-
-    // Set up a callback function to handle the response
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            console.log(xhr.responseText);
-        } else if (xhr.readyState == 4 && xhr.status != 200) {
-            console.error('Failed to execute command. Status:', xhr.status);
+            });
         }
-    };
 
-    // Send the request
-    xhr.send();
-});
-
-
+        // Execute the submitStrawberry function on DOM load
+        document.addEventListener('DOMContentLoaded', function () {
+            submitStrawberry();
+        });
 document.addEventListener("DOMContentLoaded", function() {
     // Create a new XMLHttpRequest object
     var xhr = new XMLHttpRequest();

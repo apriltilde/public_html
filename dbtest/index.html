@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add to Database</title>
+    </head>
+    <body>
+    
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <br>
+        <button type="button" onclick="addToDatabase()">Add to Database</button>
+    </form>
+    
+    <script>
+    function addToDatabase() {
+        var name = document.getElementById('name').value;
+        var age = document.getElementById('age').value;
+        var address = document.getElementById('address').value;
+    
+        // Execute the PHP script to add data to the database
+        var url = 'test.php'; // Replace with the actual path to your PHP script
+        var params = 'name=' + encodeURIComponent(name) + '&age=' + encodeURIComponent(age) + '&address=' + encodeURIComponent(address);
+    
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url + '?' + params, true);
+        xhr.onload = function() {
+            if (xhr.status == 200) {
+                alert('Data added successfully!');
+            } else {
+                alert('Failed to add data to the database.');
+            }
+        };
+        xhr.send();
+    }
+    </script>
+    
+</body>
+</html>

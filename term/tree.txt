@@ -47,8 +47,18 @@
 |   |-- script.js
 |   `-- styles.css
 |-- count-ips.php
+|-- dbtest
+|   |-- data.html
+|   |-- databasename.db
+|   |-- db.js
+|   |-- getdata.php
+|   |-- index.html
+|   `-- test.php
 |-- images
+|   |-- Golden_Strawberry.webp
+|   |-- Strawberry.webp
 |   |-- ajibtn.jpeg
+|   |-- berry.gif
 |   |-- button.jpg
 |   |-- button.png
 |   |-- buttongirl.jpg
@@ -135,8 +145,11 @@
 |   |-- term.php
 |   |-- text.txt
 |   `-- tree.txt
-|-- test.php
 |-- update.php
-`-- users.db
+|-- users.db
+`-- what
+    |-- index.html
+    |-- script.js
+    `-- styles.css
 
-16 directories, 124 files
+18 directories, 135 files

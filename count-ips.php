@@ -1,6 +1,6 @@
 <?php
 // Create a class to handle the SQLite database connection
-sleep(1);
+usleep( 500000 );
 class MyDB extends SQLite3 {
     function __construct() {
         $this->open('users.db'); // Replace 'your_database.db' with your actual database file

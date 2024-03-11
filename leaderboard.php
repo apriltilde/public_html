@@ -6,7 +6,7 @@ class MyDB extends SQLite3 {
 }
 
 $db = new MyDB();
-
+usleep( 250000 );
 
 
 // Query to get the top three usernames and their berry counts
@@ -16,7 +16,7 @@ $query =<<<EOF
     FROM berries
     WHERE LENGTH(berryType) > 0
     ORDER BY berryCount DESC
-    LIMIT 3;
+    LIMIT 5;
 EOF;
 
 $result = $db->query($query);

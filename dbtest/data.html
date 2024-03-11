@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Contents</title>
+</head>
+<body>
+
+<div id="databaseContents"></div>
+
+<script>
+// Use AJAX to fetch database contents and update the div
+document.addEventListener('DOMContentLoaded', function () {
+    var databaseContentsDiv = document.getElementById('databaseContents');
+
+    // Make an AJAX request to fetch database contents
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'getdata.php', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Update the div with the retrieved contents
+            databaseContentsDiv.innerHTML = xhr.responseText;
+        }
+    };
+    xhr.send();
+});
+</script>
+
+</body>
+</html>
