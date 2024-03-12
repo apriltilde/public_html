@@ -1,5 +1,4 @@
 ../
-|-- ,
 |-- 404.html
 |-- CozetteVector.ttf
 |-- about
@@ -146,7 +145,6 @@
 |   |-- index.html
 |   |-- script.js
 |   `-- styles.css
-|-- yt_database.db
 `-- ytget.php
 
-17 directories, 133 files
+17 directories, 131 files

@@ -64,6 +64,11 @@ li {
     margin-bottom: 1vh;
 }
 
+marquee {
+	display: block;
+}
+
+
 #leaderboard {
     display: flex;
     flex-direction: column;
@@ -88,6 +93,10 @@ li {
     align-items: center;
 }
 
+.music p {
+margin: 0;
+}
+
 .music-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -95,7 +104,7 @@ li {
 }
 
         .thumbnail-container {
-    width: 110px;
+    width: 109px;
     height: 146px;
 /* Set the height of the square container */
             overflow: hidden; /* Hide overflowing content */

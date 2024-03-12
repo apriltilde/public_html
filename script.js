@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
 
                     //                                  👇here
 
-                    name1.innerHTML = `<a style = "height: 25px;" href = "https://discord.com/channels/@me">${user.username}#3005</p>`;
+                    name1.innerHTML = `<a style = "height: 25px;" href = "https://discord.com/channels/@me">stupidapril</p>`;
 
 
 

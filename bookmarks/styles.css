@@ -18,7 +18,18 @@ body {
 .auth {
   margin-right: 10px;
 }
-
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.berry img {
+  width: 40px;
+  height: 4dvb;
+}
+.berry {
+  z-index: -999;
+}
 @media screen and (max-width: 800px) {
   .cont {
     font-size: 15px;
@@ -27,3 +38,4 @@ body {
     display: none;
 }
 }
+
